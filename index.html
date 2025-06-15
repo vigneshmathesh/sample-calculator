@@ -1,0 +1,35 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Food Order Form</title>
+</head>
+<body>
+  <h1>🍕 Online Food Order</h1>
+  
+  <form action="/submit-order" method="post">
+    <label for="name">👤 Name:</label><br>
+    <input type="text" id="name" name="customer_name" required><br><br>
+
+    <label for="address">🏠 Address:</label><br>
+    <textarea id="address" name="customer_address" required></textarea><br><br>
+
+    <label for="food">🍽️ Choose Food Item:</label><br>
+    <select id="food" name="food_item">
+      <option value="pizza">Pizza</option>
+      <option value="burger">Burger</option>
+      <option value="pasta">Pasta</option>
+      <option value="biryani">Biryani</option>
+    </select><br><br>
+
+    <label for="quantity">🔢 Quantity:</label><br>
+    <input type="number" id="quantity" name="quantity" min="1" value="1"><br><br>
+
+    <label>💳 Payment Method:</label><br>
+    <input type="radio" name="payment" value="cod" checked> Cash on Delivery<br>
+    <input type="radio" name="payment" value="card"> Credit/Debit Card<br><br>
+
+    <input type="submit" value="Place Order">
+  </form>
+</body>
+</html>
